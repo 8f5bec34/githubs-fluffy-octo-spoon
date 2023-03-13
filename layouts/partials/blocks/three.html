@@ -1,0 +1,9 @@
+{{- $print := "This partial can be called from block_1, several times, or block_2 several times, or block_3 etc. It should have access to any custom frontmatter in the post. It should only run if called from frontmatter (in this example). Partials called from here should have access to frontmatter." -}}
+
+{{- $print -}}
+
+{{- .context.anyVariableRelevantToPartialThree -}}
+{{- .context.alsoRelevantToPartialThree -}}
+
+
+{{- .pageContext.Params.custom -}}

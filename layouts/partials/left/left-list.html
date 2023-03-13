@@ -1,0 +1,36 @@
+
+
+{{- with $.Page.Params.block_1 -}}
+<div class="one">
+{{- $dot := $.Page -}}
+{{- range $.Page.Params.block_1 -}}
+{{- partial (printf `%s%s%s%s` .section   "/"  .name ".html" ) (dict "context" . "pageContext" $dot ) -}}
+{{- end -}}
+</div>
+{{- end -}}
+
+{{- if $.Page.Params.block_2 -}}
+<div class="two">
+
+{{- $dot := $.Page -}}
+{{- range .Page.Params.block_2 -}}
+{{- partial (printf `%s%s%s%s` .section   "/"  .name ".html" ) (dict "context" . "pageContext" $dot ) -}}
+{{- end -}}
+</div>
+{{- end -}}
+
+{{- if  $.Page.Params.block_3 -}}
+<div class="three">
+{{- $dot := $.Page -}}
+{{- range .Page.Params.block_3 -}}
+{{- partial (printf `%s%s%s%s` .section   "/"  .name ".html" ) (dict "context" . "pageContext" $dot ) -}}
+{{- end -}}
+</div>
+{{- else -}}
+<div class="default">
+{{- partial "blocks/default-partial.html" . -}}
+</div>
+
+{{- end -}}
+
+
