@@ -1,7 +1,6 @@
 +++
 title="A Block of Text"
 custom="custom parameter"
-[[Params]]
 [[block_1]]
 section="blocks"
 name="one"
